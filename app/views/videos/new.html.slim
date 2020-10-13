@@ -1,0 +1,10 @@
+h1 vidoes#new
+
+= form_with model: @video, local: true do |f|
+  = f.label :title, 'タイトル'
+  = f.text_field :title
+
+  = f.label :material, '動画'
+  = f.file_field :material
+
+  = f.submit '登録'
