@@ -1,0 +1,5 @@
+h1 videos#show
+
+ul
+  li = "タイトル: #{@video.title}"
+  li = "動画: #{@video.material.present? ? rails_blob_url(@video.material) : ''}"
