@@ -1,0 +1,19 @@
+h1 vidoes#index
+
+= link_to '新規作成', new_video_path
+
+table
+  thead
+    tr
+      th タイトル
+      th
+  tbody
+    - @videos.each do |video|
+      tr
+        td = video.title
+        td
+          = link_to '詳細', video_path(video)
+          | ,
+          = link_to '編集', edit_video_path(video)
+          | ,
+          = link_to '削除', video_path(video), method: :delete
